@@ -5,7 +5,9 @@ This is a simple solidity smart contract for creating and burning tokens using t
 ## Description
 
 The solidity smart contract is named Anantesh and is an example for the implementation of minting and burning functions in a contract.
-We have named our token as "HADES" and its abbrivation as "HDX".
+We have named our token as "HADES" and its abbrivation as "HDX". The contract has 2 functions - "mint" and "burn", for minting and burning of tokens. 
+
+The burn function has an if conditional statement to ensure that the amount of tokens to be burned does not exceed the balance of the account.
 
 ## Getting Started
 
@@ -13,7 +15,7 @@ We have named our token as "HADES" and its abbrivation as "HDX".
 
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., ashtokens.sol). Copy and paste the following code into the file:
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., myproject.sol). Copy and paste the following code into the file:
 
 ```
 // SPDX-License-Identifier: MIT
@@ -43,7 +45,7 @@ function burn (address adrs, uint input) public {
 }
 
 ```
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.9" (or another compatible version), and then click on the "ashtokens.sol" button.
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.9" (or another compatible version), and then click on the "myproject.sol" button.
 
 Click on the "Compile" button to compile the smart contract code. Verify that the compilation is successful without any errors.
 
@@ -52,24 +54,21 @@ In the "Deploy & Run Transactions" panel on the right-hand side of the Remix IDE
 Click on the "Deploy" button to deploy the smart contract.
 Once the contract is deployed, you will see the contract's details, including the contract address, in the "Deployed Contracts" section.
 
-Interact with the contract:
+Interact with the contract by calling the different functions.
 
-a. Click on the Tokenname and tokenAbbriv to get the name of the token you have set and its abbrivation.
+Calling the Tokenname function gives you the name of the token, in this case, "HADES".
 
-b. Also click on the totalSupply to display the initial supply of your token.
+Calling the TokenAbrriv function gives its abbrivation, "HDX".
 
-c. Mint new tokens by calling the mint function and providing an address and a value as parameters. This function adds the specified number of token to your account.
+Then, you can mint and burn tokens by calling the mint and burn function respectively and providing the account address and the respective number of tokens to be minted or burned.
 
-d. Burn tokens by calling the burn function and providing an address and a value as parameters. This function reduces the total supply of token by burning the specified number of tokens from the account.
-
-e. View token balances by accessing the balances mapping and providing an address as the key.
-
+Provide you account address in the "balance" function to get the address of the account.
 
 ## Authors
 
-Asha Raju
+Anantesh G
 
-aditya.asha@gmail.com
+anantesh6@gmail.com
 
 ## License
 
